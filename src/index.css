@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* On crée l'animation de défilement infini */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@theme {
+  /* On enregistre l'animation pour pouvoir l'utiliser en classe Tailwind */
+  --animate-marquee: marquee 15s linear infinite;
+}
