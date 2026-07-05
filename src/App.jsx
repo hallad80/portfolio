@@ -23,10 +23,10 @@ function App() {
         </ul>
       </nav>
 
-      {/* Bouton Mon CV */}
+      {/* Bouton Mon CV CORRIGÉ : Le chemin cible la racine "/" */}
       <a
-        href="CURRICULUM VITAE.docx.pdf"
-        download="CURRICULUM VITAE.docx.pdf"
+        href="/cv.pdf"
+        download="cv_hallad.pdf"
         className="bottom-4 shadow-lg text-white font-bold flex items-center text-center justify-center text-xs right-4 w-14 rounded-full h-14 cursor-pointer z-50 p-2 fixed animate-bounce bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-[length:200%_200%] md:w-23 md:h-23 md:text-xl hover:animate-none"
       >
         Mon cv
@@ -57,8 +57,9 @@ function App() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             About Me
           </h2>
+          {/* Image CORRIGÉE : Changement du chemin vers la racine "/" */}
           <div className="mb-6 flex justify-center md:justify-start">
-            <img src="src/maPhoto.jpg" alt="Hallad hassani" className="w-48 rounded-full border border-black h-48 object-cover" />
+            <img src="/maPhoto.jpg" alt="Hallad hassani" className="w-48 rounded-full border border-black h-48 object-cover" />
           </div>
           <div className="text-white leading-relaxed text-base text-left font-normal tracking-wide min-h-[260px] md:min-h-[200px]">
             <TypewriterComponent
@@ -156,7 +157,7 @@ function App() {
                   <h3 className="text-xl font-bold text-slate-100">Ouverture au monde</h3>
                 </div>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  Curieux de nature et toujours en quête d'apprentissage, j'occupe mon temps libre à <span className="font-medium text-slate-200">apprendre de nouvelles langues</span>.
+                  Curieux de nature et toujours en quête d'apprentissage, j'occuppe mon temps libre à <span className="font-medium text-slate-200">apprendre de nouvelles langues</span>.
                 </p>
               </div>
             </div>
@@ -178,11 +179,11 @@ function App() {
           <a href="https://wa.me/2693532713" className="bg-green-500  rounded-full px-6 py-2 font-semibold hover:bg-green-600 transition-colors">whatsapp</a>
           <a href="mailto:halladhassani6@gmail.com" className="bg-white text-blue-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition-colors">email</a>
         </div>
-            <form action="" className="border-3 p-3 border-black md:w-3xl m-2 rounded-lg mx-auto w-100 items-center text-center">
-              <input type="text" placeholder="entre votre email/numero whatsapp" className="border-2 w-90 rounded-full p-2 md:w-2xl"/><br />
-              <textarea name="" id="" placeholder="entrez votre demande " className="border-2 w-80 rounded-md m-3 p-2 md:w-2xl"></textarea><br />
-              <button className="cursor-pointer border-3 bg-white text-black p-2 font-bold rounded-full w-45 hover:bg-slate-400" onClick={()=>{alert(`🚨❌❌demande non prise en charge a cause d'une maintenance, veuillez nous conatactez avec whatsapp ou email. merci pour votre attention !`)}}>envoyer</button>
-            </form>
+        <form action="" className="border-3 p-3 border-black md:w-3xl m-2 rounded-lg mx-auto w-100 items-center text-center">
+          <input type="text" placeholder="entre votre email/numero whatsapp" className="border-2 w-90 rounded-full p-2 md:w-2xl"/><br />
+          <textarea name="" id="" placeholder="entrez votre demande " className="border-2 w-80 rounded-md m-3 p-2 md:w-2xl"></textarea><br />
+          <button className="cursor-pointer border-3 bg-white text-black p-2 font-bold rounded-full w-45 hover:bg-slate-400" onClick={(e)=>{e.preventDefault(); alert(`🚨❌❌demande non prise en charge a cause d'une maintenance, veuillez nous conatactez avec whatsapp ou email. merci pour votre attention !`)}}>envoyer</button>
+        </form>
       </div>
     </div>
   );
